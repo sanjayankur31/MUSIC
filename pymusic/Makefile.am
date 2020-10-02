@@ -50,21 +50,5 @@ pybuffer_la_CXXFLAGS = \
 	$(PYBUFFER_CXXFLAGS) \
 	$(MPI_CXXFLAGS)
 
-if DEB_PACKAGE
-install-exec-hook:
-	$(PYTHON) setup.py build \
-	  --build-base=$(abs_builddir)/build install \
-	  --install-layout=deb \
-	  --prefix=$(DESTDIR)$(prefix)
-else
-install-exec-hook:
-	$(PYTHON) setup.py build \
-	  --build-base=$(abs_builddir)/build install \
-	  --prefix=$(DESTDIR)$(prefix)
-	  --install-lib=$(DESTDIR)$(pyexecdir) \
-	  --install-scripts=$(DESTDIR)$(bindir) \
-	  --install-data=$(DESTDIR)$(pkgdatadir)
-endif
-
 clean-local:
 	-rm -rf $(abs_builddir)/build
