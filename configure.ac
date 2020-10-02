@@ -111,20 +111,6 @@ Could not determine proper value for MPI_LDFLAGS.  Please see README.])
   echo "$MPI_LDFLAGS"
 fi
 
-CXXFLAGS="-g -O3"
-
-#if test "$ac_test_CXXFLAGS" != set; then
-#  if test "$CXXFLAGS" = "-O2"; then
-#    CXXFLAGS="-O3"
-#  else
-  #  CXXFLAGS="-O2"
-#    CXXFLAGS="-g -O0"
-if test $CXX = g++; then
-	CXXFLAGS="-pedantic -Wall -Wno-long-long $CXXFLAGS"
-fi
-#  fi
-#fi
-
 AC_PROG_CC
 AC_PROG_LIBTOOL
 
