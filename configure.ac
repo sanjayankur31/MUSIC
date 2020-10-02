@@ -11,6 +11,8 @@ fi
 AC_PROG_CXX([mpiCC mpixlcxx mpixlcxx_r mpicxx CC])
 MPI_CXX="$CXX"
 
+TESTDIR=testsuite
+EXTRAS=extras
 echo "SYSGUESS=$SYSGUESS"
 
 AC_MSG_CHECKING(MPI_CXXFLAGS)
