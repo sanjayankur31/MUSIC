@@ -58,7 +58,8 @@ librudeconfig_la_SOURCES = src/AbstractData.cpp \
 	src/Writer.h \
         src/SourceDest.h
 
-librudeconfig_la_LDFLAGS = -version-info 5:1:2
+librudeconfig_la_LDFLAGS =  $(LDFLAGS) -version-info 5:1:2
+librudeconfig_la_CXXFLAGS = $(CXXFLAGS) $(CFLAGS)
 
 #pkginclude_HEADERS = src/config.h
 #pkgincludedir = $(includedir)/rude
